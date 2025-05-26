@@ -56,6 +56,7 @@ jobs:
         run: make validate-site-1
         working-directory: labs/L3LS_EVPN/
         if: steps.filter-site1.outputs.workflows == 'true'
+        
       - name: Expose Site 1 test report in Github Action
         run: cat labs/L3LS_EVPN/sites/site_1/anta/reports/anta_report.md >> $GITHUB_STEP_SUMMARY
         if: steps.filter-site1.outputs.workflows == 'true'
