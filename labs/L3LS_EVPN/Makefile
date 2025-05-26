@@ -26,6 +26,11 @@ cvp-legacy-site-1: ## Deploy Configs via CloudVision Legacy Network Provisioning
 cvp-site-1: ## Deploy Configs via CloudVision Static Configuration Studio
 	ansible-playbook playbooks/cvp.yml -i sites/site_1/inventory.yml -e "target_hosts=SITE1_FABRIC"
 
+.PHONY: validate-site-1
+validate-site-1: ## Validate network state
+    ansible-playbook playbooks/validate.yml -i sites/site_1/inventory.yml -e "target_hosts=SITE1_FABRIC"
+
+
 ########################################################
 # Site 2
 ########################################################
