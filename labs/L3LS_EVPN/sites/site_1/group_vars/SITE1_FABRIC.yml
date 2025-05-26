@@ -1,6 +1,6 @@
 ---
 fabric_name: SITE1_FABRIC
-
+avd_ignore_requirements: True
 # Set Design Type to L3L2 with EVPN VXLAN
 design:
   type: l3ls-evpn
